@@ -12,3 +12,6 @@ typealias  JSONDictionary = [String: AnyObject]
 
 typealias  JSONArrary = Array<AnyObject>
 
+let WIFI = "WIFI Available"
+let NOACCESS = "No Internet Access"
+let WWAN = "Cellular Access Available"

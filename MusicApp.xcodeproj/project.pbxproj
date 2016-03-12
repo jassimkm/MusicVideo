@@ -17,6 +17,7 @@
 		328C7B7A1C917ECF0001FEA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 328C7B781C917ECF0001FEA8 /* LaunchScreen.storyboard */; };
 		328C7B851C917ED00001FEA8 /* MusicAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328C7B841C917ED00001FEA8 /* MusicAppTests.swift */; };
 		328C7B901C917ED00001FEA8 /* MusicAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328C7B8F1C917ED00001FEA8 /* MusicAppUITests.swift */; };
+		32A143841C9486D400888BD9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A143831C9486D400888BD9 /* Reachability.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,9 @@
 		328C7B8B1C917ED00001FEA8 /* MusicAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		328C7B8F1C917ED00001FEA8 /* MusicAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicAppUITests.swift; sourceTree = "<group>"; };
 		328C7B911C917ED00001FEA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32A143811C9486D300888BD9 /* MusicApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		32A143821C9486D400888BD9 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		32A143831C9486D400888BD9 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,7 @@
 		328C7B6E1C917ECF0001FEA8 /* MusicApp */ = {
 			isa = PBXGroup;
 			children = (
+				32A143801C947E8900888BD9 /* Obj-c */,
 				321809991C941E9100838E82 /* Utils */,
 				321809921C91B33300838E82 /* Model */,
 				321809951C91B38900838E82 /* Supporting Files */,
@@ -172,6 +177,16 @@
 				328C7B911C917ED00001FEA8 /* Info.plist */,
 			);
 			path = MusicAppUITests;
+			sourceTree = "<group>";
+		};
+		32A143801C947E8900888BD9 /* Obj-c */ = {
+			isa = PBXGroup;
+			children = (
+				32A143821C9486D400888BD9 /* Reachability.h */,
+				32A143831C9486D400888BD9 /* Reachability.m */,
+				32A143811C9486D300888BD9 /* MusicApp-Bridging-Header.h */,
+			);
+			name = "Obj-c";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +251,7 @@
 		328C7B641C917ECF0001FEA8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Jassim Mukthar";
 				TargetAttributes = {
@@ -311,6 +327,7 @@
 				3218099B1C941EA800838E82 /* Constants.swift in Sources */,
 				3218099D1C941F8A00838E82 /* MusicVideo.swift in Sources */,
 				328C7B721C917ECF0001FEA8 /* ViewController.swift in Sources */,
+				32A143841C9486D400888BD9 /* Reachability.m in Sources */,
 				328C7B701C917ECF0001FEA8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,10 +470,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MusicApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cyboz.MusicApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MusicApp/MusicApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -464,10 +484,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MusicApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cyboz.MusicApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MusicApp/MusicApp-Bridging-Header.h";
 			};
 			name = Release;
 		};
