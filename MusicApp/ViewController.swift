@@ -18,9 +18,9 @@ class ViewController: UIViewController {
         api.loadData("https://itunes.apple.com/us/rss/topmusicvideos/limit=10/json", completion: didLoadData)
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+//
+//    override func didReceiveMemoryWarning() {
+//        super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
         
     }
@@ -49,5 +49,5 @@ class ViewController: UIViewController {
 //            self.presentViewController(alert, animated: true, completion: nil)
 //    }
 
-}
+//}
 
